@@ -1,0 +1,24 @@
+%-----------------------------------------
+% Exemplo de tabela no padrão IBGE-ABNT
+%-----------------------------------------
+\begin{table}[htb]
+    \IBGEtab{%
+    \caption{Um Exemplo de tabela alinhada que pode ser longa ou curta,
+             conforme padrão IBGE.}%
+    \label{tabela-ibge}
+    }{%
+    \begin{tabular}{ccc}
+    \toprule
+    Nome & Nascimento & Documento \\
+    \midrule \midrule
+    Maria da Silva & 11/11/1111 & 111.111.111-11 \\
+    \bottomrule
+    \end{tabular}%
+    }{%
+    \fonte{Produzido pelos autores}%
+    \nota{Esta é uma nota, que diz que os dados são baseados na
+          regressão linear.}%
+    \nota[Anotações]{Uma anotação adicional, seguida de várias outras.}%
+    }
+\end{table}
+%------
