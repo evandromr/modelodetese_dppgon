@@ -1,6 +1,5 @@
-# Modelo de Teses e Dissertações
-# Observatório Nacional
-===============================
+## Modelo de Teses e Dissertações
+## Observatório Nacional
 
 Desenvolvimento e documentação de um modelo **não-oficial** de Teses e Dissertações para o Observatório Nacional
 
