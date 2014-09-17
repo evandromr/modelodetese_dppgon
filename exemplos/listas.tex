@@ -1,0 +1,64 @@
+% ---
+\section{Enumerações: alíneas e subalíneas}
+% ---
+
+\index{alíneas}\index{subalíneas}\index{incisos}Quando for necessário enumerar
+os diversos assuntos de uma seção que não possua título, esta deve ser
+subdividida em alíneas \cite[4.2]{NBR6024:2012}:
+
+\begin{alineas}
+
+  \item os diversos assuntos que não possuam título próprio, dentro de uma mesma
+  seção, devem ser subdivididos em alíneas; 
+  
+  \item o texto que antecede as alíneas termina em dois pontos;
+  \item as alíneas devem ser indicadas alfabeticamente, em letra minúscula,
+  seguida de parêntese. Utilizam-se letras dobradas, quando esgotadas as
+  letras do alfabeto;
+
+  \item as letras indicativas das alíneas devem apresentar recuo em relação à
+  margem esquerda;
+
+  \item o texto da alínea deve começar por letra minúscula e terminar em
+  ponto-e-vírgula, exceto a última alínea que termina em ponto final;
+
+  \item o texto da alínea deve terminar em dois pontos, se houver subalínea;
+
+  \item a segunda e as seguintes linhas do texto da alínea começa sob a
+  primeira letra do texto da própria alínea;
+  
+  \item subalíneas \cite[4.3]{NBR6024:2012} devem ser conforme as alíneas a
+  seguir:
+
+  \begin{alineas}
+     \item as subalíneas devem começar por travessão seguido de espaço;
+
+     \item as subalíneas devem apresentar recuo em relação à alínea;
+
+     \item o texto da subalínea deve começar por letra minúscula e terminar em
+     ponto-e-vírgula. A última subalínea deve terminar em ponto final, se não
+     houver alínea subsequente;
+
+     \item a segunda e as seguintes linhas do texto da subalínea começam sob a
+     primeira letra do texto da própria subalínea.
+  \end{alineas}
+  
+  \item no \abnTeX\ estão disponíveis os ambientes \texttt{incisos} e
+  \texttt{subalineas}, que em suma são o mesmo que se criar outro nível de
+  \texttt{alineas}, como nos exemplos à seguir:
+  
+  \begin{incisos}
+    \item \textit{Um novo inciso em itálico};
+  \end{incisos}
+  
+  \item Alínea em \textbf{negrito}:
+  
+  \begin{subalineas}
+    \item \textit{Uma subalínea em itálico};
+    \item \underline{\textit{Uma subalínea em itálico e sublinhado}}; 
+  \end{subalineas}
+  
+  \item Última alínea com \emph{ênfase}.
+  
+\end{alineas}
+% ---
