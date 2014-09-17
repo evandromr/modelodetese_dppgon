@@ -1,4 +1,6 @@
-Modelo Não-Oficial de Teses e Dissertações para o Observatório Nacional
+Teses e Dissertações para o Observatório Nacional
 ===============================
 
-Desenvolvimento e documentação do meu modelo de Teses e Dissertações para o Observatório Nacional
+Desenvolvimento e documentação de um modelo de Teses e Dissertações para o Observatório Nacional
+
+A documentação do projeto e instruções de uso e instalação podem ser encontradas na [Wiki](https://github.com/evandromr/modelodetese_dppgon/wiki) do Projeto
