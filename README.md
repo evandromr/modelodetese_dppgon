@@ -4,15 +4,14 @@
 Desenvolvimento e documentação de um modelo **não-oficial** de Teses e
 Dissertações para o Observatório Nacional
 
-A documentação do projeto e instruções de uso e instalação podem ser encontradas
-na [**Wiki**](https://github.com/evandromr/modelodetese_dppgon/wiki) do Projeto
+Mais detalhes do projeto podem ser encontradas na nossa [**Wiki**](https://github.com/evandromr/modelodetese_dppgon/wiki).
 
 ## Instruções Básicas de Uso:
 
   - [Baixe](https://github.com/evandromr/modelodetese_dppgon/archive/master.zip) o modelo para o seu computador
   - Descompacte o arquivo do modelo (`unzip master.zip -d modelo_dppgon`)
   - Compile o arquivo `modelo_dppgon.tex`
-    - Sugestão: Compile com `pdflatex` em seguida compile a bibliografia com `bibtex` e compile mais duas (sim, __duas__ vezes com `pdflatex`)
+    - Sugestão: Compile com `pdflatex` em seguida compile a bibliografia com `bibtex` e compile mais duas vezes (sim, __duas__) com `pdflatex`
 
 ### Editando a sua tese/dissertação
 
