@@ -6,6 +6,8 @@ Dissertações para o Observatório Nacional
 
 Mais detalhes do projeto podem ser encontradas na nossa [**Wiki**](https://github.com/evandromr/modelodetese_dppgon/wiki).
 
+Visualize o modelo [Aqui](https://github.com/evandromr/modelodetese_dppgon/blob/master/modelo_dppgon.pdf?raw=true)  
+
 ## Instruções Básicas de Uso:
 
   - [Baixe](https://github.com/evandromr/modelodetese_dppgon/archive/master.zip) o modelo para o seu computador
