@@ -21,6 +21,10 @@ Visualize o modelo [Aqui](https://github.com/evandromr/modelodetese_dppgon/blob/
   - Modifique o conteúdo nos arquivos das pastas `pre-texto`, `texto` e `pos-texto`
   - Verifique no arquivo `modelo_dppgon.tex` como inserir mais textos e controle a ordem com que eles são inseridos
 
+### Exemplos
+
+    - Exemplos de como inserir figuras, tabelas, fórmulas, listas, etc podem ser visualizados na pasta `exemplos`
+
 ### Problemas ?
 
   - Verifique se sua instalação do latex está atualizada e possui todos os pacotes utilizados pelos arquivos `modelo_dppgon.tex` e `setup.tex`
