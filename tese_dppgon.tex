@@ -9,17 +9,17 @@
 	]{abntex2}
 % para mais opções, veja a documentação do projeto abntex2
 
-% Carrega codificação utf-8 para acentuação - CARREGAR ANTES DE TODO O RESTO
+% Carregar codificação utf-8 para acentuação ANTES DE TODO O RESTO
 \usepackage[utf8]{inputenc} % Codificacao do documento (conversão automática dos acentos)
-
-% Carrega o pacote com customizações para o ON
-\usepackage{dppgon}
-
-% Carrega o arquivo de informações: info.tex
-\include{info}
+\usepackage{dppgon}  % Carrega o pacote com customizações para o ON
+\include{info}  % Carrega o arquivo de informações: info.tex
 
 % Carrega arquivo com outras configurações: setup.tex
 \include{setup}
+
+% IMPORTANTE: Para impressão mude a cor dos links de AZUL para PRETO
+\definecolor{blue}{RGB}{41,5,195} % Links AZUIS
+%\definecolor{blue}{RGB}{0,0,0} % Links PRETOS
 
 % ---
 % compila o sumário
@@ -41,10 +41,12 @@
 % Capa do trabalho
 \imprimircapa
 
-% Folha de Rosto (a estrela indica que haverá ficha catalográfica no verso)
-\imprimirfolhaderosto*
+% Folha de Rosto (sem estrela indica que não haverá ficha no verso)
+\imprimirfolhaderosto
+%\imprimirfolhaderosto* (com estrela indica que haverá ficha no verso)
 
-\imprimirficha  % Isto é somente um exemplo de Ficha Catalográfica
+%\imprimirficha  % Isto é somente um exemplo de Ficha Catalográfica
+%
 % Quando a biblioteca lhe fornecer um PDF com a ficha catalográfica definitiva
 % salve-o como no diretório do seu projeto e substitua o comando anterior por:
 %
