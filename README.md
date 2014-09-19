@@ -20,6 +20,11 @@ Visualize o modelo [Aqui](https://github.com/evandromr/modelodetese_dppgon/blob/
   - Modifique as informações no arquivo `info.tex`
   - Modifique o conteúdo nos arquivos das pastas `pre-texto`, `texto` e `pos-texto`
   - Verifique no arquivo `modelo_dppgon.tex` como inserir mais textos e controle a ordem com que eles são inseridos
+  - Ao inserir arquivos externos use o caminho completo a partir do diretório do arquivo `modelo_dppgon.tex`
+    - Exemplos:  
+      - \include{texto/introducao} (inclui um arquivo de conteudo *.tex, note
+        que não se coloca a extensão .tex)  
+      - \includegraphics{figuras/grafico.pdf} (inclui a figura `grafico.pdf` da pasta `figuras`, recomenda-se o uso de imagens vetorias com extensão .pdf ou .eps ao invés de figuras com mapas de bit do tipo .jpg, .png etc, porém o LaTeX aceita ambos).
 
 ### Exemplos
 
