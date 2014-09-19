@@ -1,0 +1,242 @@
+%%
+%% Customizações do abnTeX2 (http://abnTeX2.googlecode.com) para o
+%% Observatório Nacional (ON)
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%%
+%% This work has the LPPL maintenance status `maintained'.
+%% 
+%% The Current Maintainer of this work is:
+%% Evandro M. Ribeiro -- evandroribeiro@on.br
+%%
+%% Further information about abnTeX2 are available on http://abntex2.googlecode.com/
+%%
+
+% ---
+% INICIO DAS CUSTOMIZACOES PARA O OBSERVATORIO NACIONAL
+% ---
+
+\ProvidesPackage{dppgon}[2014/09/19 - Criacao desta customizacao do abnTeX2]
+
+%------------------------------------------------------------------------------
+% Altera a capa do documento
+%------------------------------------------------------------------------------
+\renewcommand{\imprimircapa}{%
+  \begin{capa}%
+    \center
+    
+    %{\ABNTEXchapterfont\bfseries Observatório Nacional}
+    %  \\ Divisão de Programas de Pós-Graduação}
+    
+    \begin{figure}[htb]
+      \begin{center}
+      \includegraphics[scale=0.30]{figuras/logo_on.pdf}
+      \end{center}
+    \end{figure}
+
+    \vspace*{3cm}
+    {\ABNTEXchapterfont\imprimirautor}
+
+    \vspace*{\fill}
+    {\ABNTEXchapterfont\bfseries\imprimirtitulo}
+    \vspace*{\fill}
+    
+    \imprimirlocal
+    
+    \imprimirdata
+    
+    \vspace*{1cm}
+  \end{capa}
+}
+%------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------
+% Novo comando: área de concentração
+%------------------------------------------------------------------------------
+% Comandos de dados - area de concentração
+\providecommand{\imprimirarea}{}
+\newcommand{\area}[1]{\renewcommand{\imprimirarea}{#1}}
+%------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------
+% Novo comando: grau pretendido
+%------------------------------------------------------------------------------
+% Comandos de dados - grau pretendido
+\providecommand{\imprimirgrau}{}
+\newcommand{\graupretendido}[1]{\renewcommand{\imprimirgrau}{#1}}
+%------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------
+% Preambulo Automático
+%------------------------------------------------------------------------------
+% O preambulo deve conter o tipo do trabalho, o objetivo, 
+% o nome da instituição e a área de concentração 
+\preambulo{%
+   \imprimirtipotrabalho\ apresentada à Divisão de Programas de Pós-Graduação do
+   Observatório Nacional, Brasil, como requisito parcial para a obtenção do
+   título de \imprimirgrau\ em \imprimirarea.
+}
+%------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------
+% Novos comandos: Membros da Banca
+%------------------------------------------------------------------------------
+% Comandos de dados - membros da banca e instituição
+\providecommand{\imprimirmembroum}{}
+\newcommand{\membroum}[1]{\renewcommand{\imprimirmembroum}{#1}}
+\providecommand{\imprimirinstum}{}
+\newcommand{\instituicaoum}[1]{\renewcommand{\imprimirinstum}{#1}}
+
+\providecommand{\imprimirmembrodois}{}
+\newcommand{\membrodois}[1]{\renewcommand{\imprimirmembrodois}{#1}}
+\providecommand{\imprimirinstdois}{}
+\newcommand{\instituicaodois}[1]{\renewcommand{\imprimirinstdois}{#1}}
+
+\providecommand{\imprimirmembrotres}{}
+\newcommand{\membrotres}[1]{\renewcommand{\imprimirmembrotres}{#1}}
+\providecommand{\imprimirinsttres}{}
+\newcommand{\instituicaotres}[1]{\renewcommand{\imprimirinsttres}{#1}}
+
+\providecommand{\imprimirmembroquatro}{}
+\newcommand{\membroquatro}[1]{\renewcommand{\imprimirmembroquatro}{#1}}
+\providecommand{\imprimirinstquatro}{}
+\newcommand{\instituicaoquatro}[1]{\renewcommand{\imprimirinstquatro}{#1}}
+%------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------
+% Novo comando: data de aprovação
+%------------------------------------------------------------------------------
+% Comandos de dados - data de aprovação
+\providecommand{\imprimirdataaprovacao}{}
+\newcommand{\dataaprovacao}[1]{\renewcommand{\imprimirdataaprovacao}{#1}}
+%------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------
+% Novo comando: imprime exemplo folha de aprovação
+%------------------------------------------------------------------------------
+\newcommand{\imprimirfolhadeaprovacao}{%
+  \begin{folhadeaprovacao}
+
+  \begin{center}
+    {\ABNTEXchapterfont\imprimirautor}
+
+    \vspace*{\fill}\vspace*{\fill}
+    {\ABNTEXchapterfont\bfseries\imprimirtitulo}
+    \vspace*{\fill}
+    
+    \hspace{.5\textwidth}
+    \begin{minipage}{.4\textwidth}
+        \SingleSpacing
+        \nohyphens{\imprimirpreambulo}
+    \end{minipage}%
+    \vspace*{\fill}
+   \end{center}
+    
+   Trabalho aprovado. 
+   \imprimirlocal, \imprimirdataaprovacao.
+
+   \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
+   \assinatura{\textbf{\imprimirmembroum} \\ \imprimirinstum}
+   \assinatura{\textbf{\imprimirmembrodois} \\ \imprimirinstdois}
+   \abntex@ifnotempty{\imprimirmembrotres}{%
+     \assinatura{\textbf{\imprimirmembrotres} \\ \imprimirinsttres}
+   }
+   \abntex@ifnotempty{\imprimirmembroquatro}{%
+     \assinatura{\textbf{\imprimirmembroquatro} \\ \imprimirinstquatro}
+   }
+      
+   \begin{center}
+    \vspace*{0.5cm}
+    \imprimirlocal
+    \par
+    \imprimirdata
+    \vspace*{1cm}
+  \end{center}
+  
+  \end{folhadeaprovacao}
+}
+%------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------
+% Altera a folha de rosto do documento
+%------------------------------------------------------------------------------
+\renewcommand{\imprimirfolhaderostostar}{
+
+  \begin{center}
+  {\ABNTEXchapterfont\imprimirautor\par}
+  \end{center}
+  \vspace*{\fill}
+  \begin{center}
+  {\ABNTEXchapterfont\bfseries\imprimirtitulo}
+  \vspace*{\fill}
+  \end{center}
+
+  \abntex@ifnotempty{\imprimirpreambulo}{%
+    \hspace{.5\textwidth}
+    \begin{minipage}{.4\textwidth}
+      \SingleSpacing
+      \nohyphens{\imprimirpreambulo}
+    \end{minipage}%
+    \vspace*{\fill}
+  }
+
+  \begin{center}
+  \imprimirorientadorRotulo~\imprimirorientador
+  \par
+  \abntex@ifnotempty{\imprimircoorientador}{%
+    \imprimircoorientadorRotulo~\imprimircoorientador}
+
+  \vspace*{\fill}
+  \imprimirlocal
+  \par
+  \imprimirdata
+  \vspace*{1cm}
+  \end{center}
+  \clearpage
+}
+%------------------------------------------------------------------------------
+\newcommand{\imprimirficha}{%
+  \begin{fichacatalografica}
+	\vspace*{\fill}					% Posição vertical
+	\hrule							% Linha horizontal
+	\begin{center}					% Minipage Centralizado
+	\begin{minipage}[c]{12.5cm}		% Largura
+	
+	\imprimirautor
+	
+	\hspace{0.5cm} \imprimirtitulo  / \imprimirautor. --
+	\imprimirlocal, \imprimirdata-
+	
+	\hspace{0.5cm} \pageref{LastPage} p. : il. (algumas color.) ; 30 cm.\\
+	
+	\hspace{0.5cm} \imprimirorientadorRotulo~\imprimirorientador\\
+	
+	\hspace{0.5cm}
+	\parbox[t]{\textwidth}{\imprimirtipotrabalho~--~Instituição,
+	\imprimirdata.}\\
+	
+	\hspace{0.5cm}
+		1. Palavra-Chave.
+		2. Palavra-Chave.
+		I. Não-sei.
+		II. Não-sei.
+		III. Não-sei.
+		IV. Não-sei. 			
+	
+	\hspace{8.75cm} CDU 00:000:000.0\\
+	
+	\end{minipage}
+	\end{center}
+	\hrule
+  \end{fichacatalografica}
+}
+
+% ---
+% FIM DAS CUSTOMIZACOES PARA O OBSERVATÓRIO NACIONAL
+% ---

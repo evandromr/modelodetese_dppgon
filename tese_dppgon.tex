@@ -1,38 +1,28 @@
-%%
-%% Customizações do abnTeX2 (http://abnTeX2.googlecode.com) para a elaboração
-%% de Teses e Dissertações do Observatório Nacional (ON)
-%%
-%% This work may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License, either version 1.3
-%% of this license or (at your option) any later version.
-%% The latest version of this license is in
-%%   http://www.latex-project.org/lppl.txt
-%% and version 1.3 or later is part of all distributions of LaTeX
-%% version 2005/12/01 or later.
-%%
-%% This work has the LPPL maintenance status `maintained'.
-%% 
-%% The Current Maintainer of this work is:
-%% Evandro M. Ribeiro -- evandroribeiro@on.br
-%%
-%% Further information about abnTeX2 are available on http://abntex2.googlecode.com/
-%%
+\documentclass[
+	% -- opções da classe memoir --
+    12pt,				% tamanho da fonte (padrao ABNT: 12pt)
+	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	twoside,			% para impressão em verso e anverso. Oposto a oneside
+	a4paper,			% tamanho do papel.
+	english,			% idioma adicional para hifenização
+	brazil,				% o último idioma é o principal do documento
+	]{abntex2}
+% para mais opções, veja a documentação do projeto abntex2
+
+% Carrega codificação utf-8 para acentuação - CARREGAR ANTES DE TODO O RESTO
+\usepackage[utf8]{inputenc} % Codificacao do documento (conversão automática dos acentos)
+
+% Carrega o pacote com customizações para o ON
+\usepackage{dppgon}
+
+% Carrega o arquivo de informações: info.tex
+\include{info}
+
+% Carrega arquivo com outras configurações: setup.tex
+\include{setup}
 
 % ---
-% INICIO DAS CUSTOMIZACOES PARA A DISSERTAÇÃO DE MESTRADO EM ASTRONOMIA DO
-% OBSERVATORIO NACIONAL
-% ---
-
-% Carrega pacotes e configurações padroes
-\input{configuracoes/setup1}
-% Carrega meta-informações
-\input{configuracoes/info}
-% Carrega mais configurações padrões, baseados nas meta-informações
-\input{configuracoes/setup2}
-
-
-% ---
-% compila o indice (sumário)
+% compila o sumário
 % ---
 \makeindex
 % ---
@@ -45,49 +35,70 @@
 % Retira espaço extra obsoleto entre as frases.
 \frenchspacing
 
-% ----------------------------------------------------------
+% -----------------------------------------------------------------------------
 % ELEMENTOS PRÉ-TEXTUAIS
-% ----------------------------------------------------------
-\input{pre-textual/capa}           % obrigatório
-\input{pre-textual/folhaderosto}   % obrigatório
-\input{pre-textual/ficha}          % obrigatório
-\input{pre-textual/errata}         % opcional
-\input{pre-textual/aprovacao}      % obrigatório
-\input{pre-textual/dedicatoria}    % opcional
-\input{pre-textual/agradecimentos} % opcional
-\input{pre-textual/epigrafe}       % opcional
-\input{pre-textual/resumo}         % obrigatório
-\input{pre-textual/abstract}       % obrigatório
-\input{pre-textual/listafiguras}   % opcional
-\input{pre-textual/listatabelas}   % opcional
-\input{pre-textual/listasiglas}    % opcional
-\input{pre-textual/listasimbolos}  % opcional
-\input{pre-textual/sumario}        % obrigatório
-% ---
+% -----------------------------------------------------------------------------
+% Capa do trabalho
+\imprimircapa
 
-% ----------------------------------------------------------
+% Folha de Rosto (a estrela indica que haverá ficha catalográfica no verso)
+\imprimirfolhaderosto*
+
+\imprimirficha  % Isto é somente um exemplo de Ficha Catalográfica
+% Quando a biblioteca lhe fornecer um PDF com a ficha catalográfica definitiva
+% salve-o como no diretório do seu projeto e substitua o comando anterior por:
+%
+% \begin{fichacatalografica}
+%     \includepdf{ficha_catalografica.pdf}
+% \end{fichacatalografica}
+%
+
+\imprimirfolhadeaprovacao  % Folha de aprovação e espaço para assinaturas
+
+\include{pre-texto/dedicatoria}    % opcional
+\include{pre-texto/agradecimentos} % opcional
+\include{pre-texto/epigrafe}       % opcional
+
+% Resumo em Português
+\include{pre-texto/resumo}         % obrigatório
+% Resumo em Inglês
+\include{pre-texto/abstract}       % obrigatório
+
+% Listas
+\include{pre-texto/listafiguras}   % opcional
+\include{pre-texto/listatabelas}   % opcional
+\include{pre-texto/listasiglas}    % opcional
+\include{pre-texto/listasimbolos}  % opcional
+
+% Sumário (ou Índice)
+\include{pre-texto/sumario}        % obrigatório
+% -----------------------------------------------------------------------------
+
+% -----------------------------------------------------------------------------
 % ELEMENTOS TEXTUAIS
-% ----------------------------------------------------------
+% -----------------------------------------------------------------------------
 \textual % Páginas numeradas daqui em diante
 
-\input{textual/part-introducao}
-\input{textual/part-metodologia}
-\input{textual/part-resultados}
-\input{textual/part-conclusao}
+\include{texto/part-introducao}
+\include{texto/part-metodologia}
+\include{texto/part-resultados}
+\include{texto/part-conclusao}
 
-%% ----------------------------------------------------------
-%% ELEMENTOS PÓS-TEXTUAIS
-%% ----------------------------------------------------------
+% -----------------------------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% -----------------------------------------------------------------------------
 \postextual
 %% para referências bibliográficas recomenda-se o uso de BibTeX (Google it!)
+% nesse caso abaixo as referências devem estar em um arquivo chamado
+% "bibliografia.bib" na pasta "pos-texto"
+\bibliography{pos-texto/bibliografia}  % obrigatório
 
-\bibliography{pos-textual/bibliografia}  % obrigatório
-\input{pos-textual/apendices}  % opcional
-\input{pos-textual/anexos}     % opcional
+\include{pos-texto/apendices}  % opcional
+\include{pos-texto/anexos}     % opcional
 
-%---------------------------------------------------------------------
+% -----------------------------------------------------------------------------
 % INDICE REMISSIVO (Opcional - Veja documentação da abntex2)
-%---------------------------------------------------------------------
+% -----------------------------------------------------------------------------
 % \phantompart
 % \printindex
 

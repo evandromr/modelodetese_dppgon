@@ -1,0 +1,86 @@
+% -----------------------------------------------------------------------------
+% Pacotes fundamentais 
+% -----------------------------------------------------------------------------
+\usepackage{cmap}				% Mapear caracteres especiais no PDF
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage{lastpage}			% Usado pela Ficha catalográfica
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{hyphenat}           % pode forçar palavras a não serem hyphenizadas
+% -----------------------------------------------------------------------------
+
+% -----------------------------------------------------------------------------
+% Fonte
+% -----------------------------------------------------------------------------
+% A fonte padrão do LaTeX é 'Computer Modern' a fonte 'Latin Modern' oferece
+% algumas melhorias na renderização de símbolos
+
+\usepackage{lmodern}	        % Usa a fonte Latin Modern
+% -----------------------------------------------------------------------------
+		
+% -----------------------------------------------------------------------------
+% Pacotes de citações
+% -----------------------------------------------------------------------------
+% o pacote abaixo permite citações do tipo: "citado na página X." etc.
+\usepackage[brazilian,hyperpageref]{backref} % Paginas com as citações
+
+% veja a documentação do pacote abntex2cite para instruções no padrão de
+% citação (veja referência e licensa no arquivo principal desse projeto)
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT do tipo: Autor, Ano
+% -----------------------------------------------------------------------------
+
+% -----------------------------------------------------------------------------
+% Pacotes adicionais
+% -----------------------------------------------------------------------------
+\usepackage{lipsum}				% para geração de lero-lero em latim
+% -----------------------------------------------------------------------------
+
+% -----------------------------------------------------------------------------
+% CONFIGURAÇÕES DE PACOTES
+% -----------------------------------------------------------------------------
+% Configurações do pacote backref para citações indiretas
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+% -----------------------------------------------------------------------------
+
+% -----------------------------------------------------------------------------
+% Espaçamentos entre linhas e parágrafos 
+% -----------------------------------------------------------------------------
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+% -----------------------------------------------------------------------------
+
+% -----------------------------------------------------------------------------
+% informações do PDF
+% -----------------------------------------------------------------------------
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+		%pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=blue,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      	% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+% -----------------------------------------------------------------------------
