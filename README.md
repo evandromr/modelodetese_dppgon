@@ -24,31 +24,31 @@ Visualize o modelo [Aqui](https://github.com/evandromr/modelodetese_dppgon/blob/
   |-- setup.tex         (Arquivo de configuração e chamada de pacotes)  
   |-- info.tex          (Arquivo com informações da tese: título, autor etc)  
   |-- pre-texto/  
-      |  
-      |-- dedicatoria.tex  
-      |-- agradecimentos.tex  
-      |-- epigrafe.tex  
-      |-- resumo.tex  
-      |-- abstract.tex  
-      |-- listafiguras.tex    (Lista gerada automaticamente)  
-      |-- listatabelas.tex    (Lista gerada automaticamente)  
-      |-- listasimbolos.tex   (Editar manualmente)  
-      |-- listasiglas.tex     (Editar manualmente)  
-      |-- sumario.tex         (Gerado automaticamente)  
+  |   |  
+  |   |-- dedicatoria.tex  
+  |   |-- agradecimentos.tex  
+  |   |-- epigrafe.tex  
+  |   |-- resumo.tex  
+  |   |-- abstract.tex  
+  |   |-- listafiguras.tex    (Lista gerada automaticamente)  
+  |   |-- listatabelas.tex    (Lista gerada automaticamente)  
+  |   |-- listasimbolos.tex   (Editar manualmente)  
+  |   |-- listasiglas.tex     (Editar manualmente)  
+  |   |-- sumario.tex         (Gerado automaticamente)  
   |-- texto/  
-      |  
-      |-- texto.tex           (Um ou mais arquivos com o conteúdo da tese)  
+  |   |  
+  |   |-- texto.tex           (Um ou mais arquivos com o conteúdo da tese)  
   |-- pos-texto/  
-      |  
-      |-- bibliografia.bib    (Arquivo com citacoes em formato BibTex)  
-      |-- apendices.tex       (Um ou mais arquivos com apendices)  
-      |-- anexos.tex          (Um ou mais arquivos com anexos)  
+  |   |  
+  |   |-- bibliografia.bib    (Arquivo com citacoes em formato BibTex)  
+  |   |-- apendices.tex       (Um ou mais arquivos com apendices)  
+  |   |-- anexos.tex          (Um ou mais arquivos com anexos)  
   |-- figuras/  
-      |  
-      |-- (*Opcional*, pasta para armazenar figuras)  
+  |   |  
+  |   |-- (*Opcional*, pasta para armazenar figuras)  
   |-- exemplos/  
-      |  
-      |-- Pasta com exemplos de inserção de figuras, tabelas, listas etc.  
+  |   |  
+  |   |-- Pasta com exemplos de inserção de figuras, tabelas, listas etc.  
 
 ### Editando a sua tese/dissertação
 
