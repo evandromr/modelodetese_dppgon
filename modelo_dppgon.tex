@@ -12,13 +12,16 @@
 % Carregar codificação utf-8 para acentuação ANTES DE TODO O RESTO
 \usepackage[utf8]{inputenc} % Codificacao do documento (conversão automática dos acentos)
 \usepackage{dppgon}  % Carrega o pacote com customizações para o ON
-\include{info}  % Carrega o arquivo de informações: info.tex
 
+% Carrega o arquivo de informações: info.tex
+\include{00_info}
 % Carrega arquivo com outras configurações: setup.tex
-\include{setup}
+\include{01_setup}
+% Carrega arquivo com omandos personalizados
+\include{02_comandos}
 
 % IMPORTANTE: Para impressão mude a cor dos links de AZUL para PRETO
-\definecolor{blue}{RGB}{41,5,195} % Links AZUIS -- apague ou comente essa linha para imprimir
+\definecolor{blue}{RGB}{21,3,95} % Links AZUIS -- apague ou comente essa linha para imprimir
 %\definecolor{blue}{RGB}{0,0,0} % Links PRETOS -- descomente essa linha para imprimir
 
 % ---
@@ -57,23 +60,23 @@
 
 \imprimirfolhadeaprovacao  % Folha de aprovação e espaço para assinaturas
 
-\include{pre-texto/dedicatoria}    % opcional
-\include{pre-texto/agradecimentos} % opcional
-\include{pre-texto/epigrafe}       % opcional
+\include{03_dedicatoria}    % opcional
+\include{04_agradecimentos} % opcional
+\include{05_epigrafe}       % opcional
 
 % Resumo em Português
-\include{pre-texto/resumo}         % obrigatório
+\include{resumo}         % obrigatório
 % Resumo em Inglês
-\include{pre-texto/abstract}       % obrigatório
+\include{abstract}       % obrigatório
 
 % Listas
-\include{pre-texto/listafiguras}   % opcional
-\include{pre-texto/listatabelas}   % opcional
-\include{pre-texto/listasiglas}    % opcional
-\include{pre-texto/listasimbolos}  % opcional
+\include{06_listafiguras}   % opcional
+\include{07_listatabelas}   % opcional
+\include{08_listasiglas}    % opcional
+\include{09_listasimbolos}  % opcional
 
 % Sumário (ou Índice)
-\include{pre-texto/sumario}        % obrigatório
+\include{10_sumario}        % obrigatório
 % -----------------------------------------------------------------------------
 
 % -----------------------------------------------------------------------------
@@ -81,22 +84,27 @@
 % -----------------------------------------------------------------------------
 \textual % Páginas numeradas daqui em diante
 
-\include{texto/part-introducao}
-\include{texto/part-metodologia}
-\include{texto/part-resultados}
-\include{texto/part-conclusao}
+\include{capitulo1}
+\include{capitulo2}
+\include{capitulo3}
+\include{capitulo4}
 
 % -----------------------------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS
 % -----------------------------------------------------------------------------
 \postextual
 %% para referências bibliográficas recomenda-se o uso de BibTeX (Google it!)
-% nesse caso abaixo as referências devem estar em um arquivo chamado
-% "bibliografia.bib" na pasta "pos-texto"
-\bibliography{pos-texto/bibliografia}  % obrigatório
 
-\include{pos-texto/apendices}  % opcional
-\include{pos-texto/anexos}     % opcional
+% Carrega pacote de estilo bibliográfico persnonalizado
+% !! NAO OBEDECE ABNT (por recomendacao de professores do ON)
+% Comente a linha abaixo se deseja manter o estilo "oficial" da ABNT
+\bibliographystyle{dppgon}
+% no caso abaixo as referências devem estar em um arquivo chamado
+% "referencias.bib" na mesma pasta que este arquivo
+\bibliography{referencias}  % obrigatório
+
+\include{11_apendices}  % opcional
+\include{12_anexos}     % opcional
 
 % -----------------------------------------------------------------------------
 % INDICE REMISSIVO (Opcional - Veja documentação da abntex2)

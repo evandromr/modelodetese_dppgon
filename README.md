@@ -13,13 +13,15 @@ Visualize o modelo [Aqui](https://github.com/evandromr/modelodetese_dppgon/blob/
   - [Baixe](https://github.com/evandromr/modelodetese_dppgon/archive/master.zip) o modelo para o seu computador
   - Descompacte o arquivo do modelo (`unzip master.zip -d modelo_dppgon`)
   - Compile o arquivo `modelo_dppgon.tex`
-    - Sugestão: Compile com `pdflatex` em seguida compile a bibliografia com `bibtex` e compile mais duas vezes (sim, __duas__) com `pdflatex`
+    - Use o comando `make` para gerar o .pdf, e `make clean` para apagar os arquivos auxiliares. Use `make clean-all` para apagar todos os produtos, inclusive o .pdf. Caso seja necessário alterar o nome do arquivo `modelo_dppgon.tex` modifique também a variáveil "TARGET" no arquivo `Makefile`
+    - Alternativa. Compile com `pdflatex` em seguida compile a bibliografia com `bibtex` e compile mais duas vezes (sim, __duas__) com `pdflatex`
 
 ### Editando a sua tese/dissertação
 
-  - Modifique as informações no arquivo `info.tex`
-  - Modifique o conteúdo nos arquivos das pastas `pre-texto`, `texto` e `pos-texto`
+  - Modifique as informações no arquivo `00_info.tex`
+  - Se necessário, modifique também as configurações do arquivo `01_setup.tex`
   - Verifique no arquivo `modelo_dppgon.tex` como inserir mais textos e controle a ordem com que eles são inseridos
+  - Modifique o conteúdo nos demais arquivos .tex
   - Ao inserir arquivos externos use o caminho completo a partir do diretório do arquivo `modelo_dppgon.tex`, mesmo que o arquivo esteja no mesmo diretório em que o arquivo .tex que o inclui.
     - __Exemplos:__  
     - \include{texto/introducao} (inclui um arquivo de conteudo \*.tex, note que não se coloca a extensão .tex)
@@ -36,7 +38,7 @@ Visualize o modelo [Aqui](https://github.com/evandromr/modelodetese_dppgon/blob/
 
 ### Não se Esqueça!!
 
-  - Para a versão impressa da Tese/Dissertação modifique a cor dos links de azul para preto 
+  - Para a versão impressa da Tese/Dissertação modifique a cor dos links de azul para preto
     - Veja no arquivo `modelo_dppgon.tex` como fazer isso (é só apagar uma linha e apagar o comentário de outra linha)
 
 ### Mais dúvidas?

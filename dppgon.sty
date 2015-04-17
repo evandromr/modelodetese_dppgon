@@ -11,7 +11,7 @@
 %% version 2005/12/01 or later.
 %%
 %% This work has the LPPL maintenance status `maintained'.
-%% 
+%%
 %% The Current Maintainer of this work is:
 %% Evandro M. Ribeiro -- evandroribeiro@on.br
 %%
@@ -24,12 +24,15 @@
 
 \ProvidesPackage{dppgon}[2014/09/19 - Criacao desta customizacao do abnTeX2]
 
-% Modifica fontes para o tamnho  normal 12pt
+%------------------------------------------------------------------------------
+% Altera o tamanho das fontes para tamanho 12 conforme as normas da ABNT
+%------------------------------------------------------------------------------
 %\renewcommand{\ABNTEXchapterfontsize}{\normalsize}
 %\renewcommand{\ABNTEXsectionfontsize}{\normalsize}
 %\renewcommand{\ABNTEXsubsectionfontsize}{\normalsize}
 %\renewcommand{\ABNTEXsubsubsectionfontsize}{\normalsize}
 %\renewcommand{\ABNTEXsubsubsubsectionfontsize}{\normalsize}
+%\renewcommand{\ABNTEXsubsubsubsubsectionfontsize}{\normalsize}
 
 %------------------------------------------------------------------------------
 % Altera a capa do documento
@@ -37,10 +40,10 @@
 \renewcommand{\imprimircapa}{%
   \begin{capa}%
     \center
-    
+
     %{\ABNTEXchapterfont\bfseries Observatório Nacional}
     %  \\ Divisão de Programas de Pós-Graduação}
-    
+
     \begin{figure}[htb]
       \begin{center}
       \includegraphics[scale=0.30]{figuras/logo_on.pdf}
@@ -51,13 +54,13 @@
     {\ABNTEXchapterfont\large\imprimirautor}
 
     \vspace*{\fill}
-    {\ABNTEXchapterfont\LARGE\bfseries\imprimirtitulo}
+    {\ABNTEXchapterfont\bfseries\LARGE\imprimirtitulo}
     \vspace*{\fill}
-    
+
     \imprimirlocal
-    
+
     \imprimirdata
-    
+
     \vspace*{1cm}
   \end{capa}
 }
@@ -82,8 +85,8 @@
 %------------------------------------------------------------------------------
 % Preambulo Automático
 %------------------------------------------------------------------------------
-% O preambulo deve conter o tipo do trabalho, o objetivo, 
-% o nome da instituição e a área de concentração 
+% O preambulo deve conter o tipo do trabalho, o objetivo,
+% o nome da instituição e a área de concentração
 \preambulo{%
    \imprimirtipotrabalho\ apresentada à Divisão de Programas de Pós-Graduação do
    Observatório Nacional, Brasil, como requisito parcial para a obtenção do
@@ -136,7 +139,7 @@
     \vspace*{\fill}\vspace*{\fill}
     {\ABNTEXchapterfont\LARGE\bfseries\imprimirtitulo}
     \vspace*{\fill}
-    
+
     \hspace{.5\textwidth}
     \begin{minipage}{.4\textwidth}
         \SingleSpacing
@@ -144,11 +147,11 @@
     \end{minipage}%
     \vspace*{\fill}
    \end{center}
-    
-   Trabalho aprovado. 
+
+   Trabalho aprovado.
    \imprimirlocal, \imprimirdataaprovacao.
 
-   \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
+   \assinatura{\textbf{\imprimirorientador} \\ Orientador}
    \assinatura{\textbf{\imprimirmembroum} \\ \imprimirinstum}
    \assinatura{\textbf{\imprimirmembrodois} \\ \imprimirinstdois}
    \abntex@ifnotempty{\imprimirmembrotres}{%
@@ -157,7 +160,7 @@
    \abntex@ifnotempty{\imprimirmembroquatro}{%
      \assinatura{\textbf{\imprimirmembroquatro} \\ \imprimirinstquatro}
    }
-      
+
    \begin{center}
     \vspace*{0.5cm}
     \imprimirlocal
@@ -165,7 +168,7 @@
     \imprimirdata
     \vspace*{1cm}
   \end{center}
-  
+
   \end{folhadeaprovacao}
 }
 %------------------------------------------------------------------------------
@@ -214,31 +217,30 @@
 	\hrule							% Linha horizontal
 	\begin{center}					% Minipage Centralizado
 	\begin{minipage}[c]{12.5cm}		% Largura
-	
+
 	\imprimirautor
-	
+
 	\hspace{0.5cm} \imprimirtitulo  / \imprimirautor. --
 	\imprimirlocal, \imprimirdata-
-	
+
 	\hspace{0.5cm} \pageref{LastPage} p. : il. (algumas color.) ; 30 cm.\\
-	
+
 	\hspace{0.5cm} \imprimirorientadorRotulo~\imprimirorientador\\
-	
+
 	\hspace{0.5cm}
 	\parbox[t]{\textwidth}{\imprimirtipotrabalho~--~Instituição,
 	\imprimirdata.}\\
-	
+
 	\hspace{0.5cm}
 		1. Palavra-Chave.
 		2. Palavra-Chave.
-		I. Não-sei.
-		II. Não-sei.
-		III. Não-sei.
-		IV. Não-sei. 			
-	
+		I. Palavra-Chave.
+		II. Palavra-Chave.
+		III. Palavra-Chave.
+		IV. Palavra-Chave.
 	\hspace{8.75cm} CDU 00:000:000.0\\
 	
-	\end{minipage}
+    \end{minipage}
 	\end{center}
 	\hrule
   \end{fichacatalografica}

@@ -1,5 +1,5 @@
 % -----------------------------------------------------------------------------
-% Pacotes fundamentais 
+% Pacotes fundamentais
 % -----------------------------------------------------------------------------
 \usepackage{cmap}				% Mapear caracteres especiais no PDF
 \usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
@@ -15,10 +15,8 @@
 % -----------------------------------------------------------------------------
 % A fonte padrão do LaTeX é 'Computer Modern' a fonte 'Latin Modern' oferece
 % algumas melhorias na renderização de símbolos
-
 \usepackage{lmodern}	        % Usa a fonte Latin Modern
-% -----------------------------------------------------------------------------
-		
+
 % -----------------------------------------------------------------------------
 % Pacotes de citações
 % -----------------------------------------------------------------------------
@@ -33,7 +31,11 @@
 % -----------------------------------------------------------------------------
 % Pacotes adicionais
 % -----------------------------------------------------------------------------
-\usepackage{lipsum}				% para geração de lero-lero em latim
+\usepackage{lipsum}   % para geração de lero-lero em latim
+\usepackage{amsmath}  % simbolos matematicos
+\usepackage{amssymb}  % mais simbolos matematicos
+\usepackage{color}    % permite uso de \color{}. Util para revisao de texto
+\usepackage{chngpage} % permite uso do ambiente adjustwidth para ignorar margens
 % -----------------------------------------------------------------------------
 
 % -----------------------------------------------------------------------------
@@ -56,7 +58,7 @@
 % -----------------------------------------------------------------------------
 
 % -----------------------------------------------------------------------------
-% Espaçamentos entre linhas e parágrafos 
+% Espaçamentos entre linhas e parágrafos
 % -----------------------------------------------------------------------------
 % O tamanho do parágrafo é dado por:
 \setlength{\parindent}{1.3cm}
@@ -70,15 +72,15 @@
 \makeatletter
 \hypersetup{
      	%pagebackref=true,
-		pdftitle={\@title}, 
+		pdftitle={\@title},
 		pdfauthor={\@author},
-    	pdfsubject={\imprimirpreambulo},
-	    pdfcreator={LaTeX with abnTeX2},
-		%pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+  	pdfsubject={\imprimirpreambulo},
+    pdfcreator={LaTeX with abnTeX2},
+		%pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico},
 		colorlinks=true,       		% false: boxed links; true: colored links
-    	linkcolor=blue,          	% color of internal links
-    	citecolor=blue,        		% color of links to bibliography
-    	filecolor=magenta,      	% color of file links
+  	linkcolor=blue,          	% color of internal links
+  	citecolor=blue,        		% color of links to bibliography
+  	filecolor=magenta,      	% color of file links
 		urlcolor=blue,
 		bookmarksdepth=4
 }
