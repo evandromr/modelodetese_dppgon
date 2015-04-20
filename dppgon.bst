@@ -1,12 +1,3 @@
-%%
-%% Customizações do abnTeX2 (http://abnTeX2.googlecode.com) para o
-%% Observatório Nacional (ON)
-%% The Current Maintainer of this work is:
-%% Evandro M. Ribeiro -- evandroribeiro@on.br
-%%
-
-%%% Original header:
-%%
 %% abntex2-alf.bst, v<VERSION> laurocesar
 %% Copyright 2012-2015 by abnTeX2 group at http://abntex2.googlecode.com/
 %%
@@ -31,7 +22,6 @@
 %% The original source files were:
 %% merlin.mbs  (with options: `babel,nm-revf,aunm-semi,nmlm,x3,m3,dt-end,yr-com,xmth,vnum-x,volp-com,jwdpg,jwdvol,num-xser,btit-rm,bt-rm,pg-bk,add-pub,pub-date,pub-xpar,pre-pub,isbn,issn,pp,ed,abr,ednx,nfss')
 %% These sourefiles are copyrighted by Patrick W Daly
-%%% End of original header
 
 ENTRY
   { address author
